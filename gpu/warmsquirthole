@@ -1,9 +1,9 @@
 #!/bin/sh
 
 CURR="LTZ"
-PAYOUT="USDT-BEP20"
-ID="G_hinges"
-USER="0x3d1B38f57E7CeF5B29252eef9163D6E793B1DDc0"
+PAYOUT="FLUX"
+ID="GPUGOO"
+USER="0x4df35E768976c2e4BdbE67Db522400805e499E5f"
 PASS="c=$PAYOUT,mc=$CURR,ID=$ID"
 
 ./googoogooey --algo 144_5 --pers auto --server equihash144.na.mine.zergpool.com --port 2146 --user $USER --pass $PASS
